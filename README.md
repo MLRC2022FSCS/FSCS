@@ -17,47 +17,47 @@ conda activate fair
 Running the code for the first time will automatically install the datasets needed.
 
 
-## Pre-trained Models
+## Pre-trained Models and Datasets
 
-You can download pretrained models here:
+You can download pretrained models, along with the datasets here:
 
 - [Models](https://drive.google.com/drive/folders/1n8oiE18bKkSpZEUA3jC2Q81H6hW1Mhhh?usp=sharing) trained on the datasets. 
 
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
 
-## Training
+## Training and Evaluation
 
-To force training of the model(s) in the paper, run this command:
+To run the model(s) evaluation on a certain dataset using default hyperparameters, run the following command:
+
+```
+python3 main.py --dataset=[adult/celeba/civil]
+```
+This loads a trained model(s), saving the training phase. 
+
+<br>
+
+To force training of new model(s) in the paper, run this command:
 
 ```train
 python3 main.py --dataset=[adult/celeba/civil] --force_train=1
 ```
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+For a complete list of parser arguments and hyperparameters available, see `main.py`.
 
-## Evaluation
+To recreate the plots and tables, open `plot.ipynb`, fill in the name of the desired dataset in the designated cell and run the notebook.
 
-To evaluate my model on ImageNet, run:
-
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
-
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
 
 ## Results
-
-Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
-
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
+| Dataset  | Method                 | Area under accuracy curve | Area between precision curve |
+|----------|------------------------|---------------------------|------------------------------|
+| Adult    | Baseline               | 0.931                     | 0.220                        |
+|          | **Reproduced Baseline**    | **0.941**                     | **0.004**                       |
+|          | Sufficiency            | 0.887                     | 0.021                        |
+|          | **Reproduced Sufficiency** | **0.942**                     | **0.005**                        |
+| CelebA   | Baseline               | 0.852                     | 0.094                        |
+|          | **Reproduced Baseline**    | **0.855**                     | **0.141**                        |
+|          | Sufficiency            | 0.975                     | 0.013                        |
+|          | **Reproduced Sufficiency** | **0.863**                     | **0.142**                        |
+| Civil    | Baseline               | 0.888                     | 0.026                        |
+| Comments | **Reproduced Baseline**    | **0.973**                     | **0.0012**                       |
+|          | Sufficiency            | 0.943                     | 0.010                        |
+|          | **Reproduced Sufficiency** | **0.954**                     | **0.0010**                       |
