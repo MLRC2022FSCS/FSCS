@@ -38,7 +38,7 @@ This loads a trained model(s), skipping the training phase.
 To force training of new model(s) in the paper, run this command:
 
 ```train
-python3 main.py --dataset_bane=[adult/celeba/civil] --force_train=1
+python3 main.py --dataset_name=[adult/celeba/civil] --force_train=1
 ```
 
 For a complete list of parser arguments and hyperparameters available, see `main.py`.
