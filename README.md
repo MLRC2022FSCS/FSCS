@@ -19,9 +19,9 @@ Running the code for the first time will automatically install the datasets need
 
 ## Datasets and Pre-trained Models
 
-Please download the datasets, along with the pretrained models:
+Please download the datasets, along with the pretrained models and place them in `./Data/` and `./Models/` respectively:
 
-- [Models](https://drive.google.com/drive/folders/1n8oiE18bKkSpZEUA3jC2Q81H6hW1Mhhh?usp=sharing) trained on the datasets. 
+- [Models](https://drive.google.com/drive/folders/1rIVNt_LoXew0nCAa6rs2Znz1h7yMHOw9?usp=sharing) trained on the datasets. 
 
 
 ## Training and Evaluation
