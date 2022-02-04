@@ -1,0 +1,21 @@
+name: fair
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.*
+  - numpy=1.22.*
+  - pip=21.2.*
+  - cudatoolkit=11.3.*
+  - pytorch=1.10.*
+  - pytorch-mutex=1.0
+  - torchaudio=0.10.*
+  - torchvision=0.11.*
+  - pip:
+    - pandas
+    - matplotlib
+    - aif360
+    - jupyter
+    - ipython
+    - transformers
