@@ -17,9 +17,9 @@ conda activate fair
 Running the code for the first time will automatically install the datasets needed.
 
 
-## Pre-trained Models and Datasets
+## Datasets and Pre-trained Models
 
-You can download pretrained models, along with the datasets here:
+Please download the datasets, along with the pretrained models:
 
 - [Models](https://drive.google.com/drive/folders/1n8oiE18bKkSpZEUA3jC2Q81H6hW1Mhhh?usp=sharing) trained on the datasets. 
 
