@@ -29,16 +29,16 @@ Please download the datasets, along with the pretrained models:
 To run the model(s) evaluation on a certain dataset using default hyperparameters, run the following command:
 
 ```
-python3 main.py --dataset=[adult/celeba/civil]
+python3 main.py --dataset_name=[adult/celeba/civil]
 ```
-This loads a trained model(s), saving the training phase. 
+This loads a trained model(s), skipping the training phase. 
 
 <br>
 
 To force training of new model(s) in the paper, run this command:
 
 ```train
-python3 main.py --dataset=[adult/celeba/civil] --force_train=1
+python3 main.py --dataset_bane=[adult/celeba/civil] --force_train=1
 ```
 
 For a complete list of parser arguments and hyperparameters available, see `main.py`.
